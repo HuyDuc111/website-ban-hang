@@ -4,10 +4,17 @@
     color: crimson;
     font-weight: bolder;
     padding-left: 30px;
-    display: inline-block;
+    display: flex;
+}
+.smartphone{
+    flex-direction: row;
+    margin-top: 6px;
+    
 }
 .input{
-
+    flex-direction: row;
+    margin-left: 145px;
+    margin-bottom: 15px;
 }
 
 .top2{
