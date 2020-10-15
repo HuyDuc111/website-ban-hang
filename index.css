@@ -1,0 +1,57 @@
+.top1{
+    background-color: black;
+    font-size: 40px;
+    color: crimson;
+    font-weight: bolder;
+    padding-left: 30px;
+    display: inline-block;
+}
+.input{
+
+}
+
+.top2{
+    background-color: lawngreen;
+    font-size: 30px;
+    display: flex; 
+    
+}
+
+.phone{
+    
+    flex: 1;
+    text-decoration: none;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.ip{
+    color: dimgray;
+    margin-left: 25px;
+    
+}
+.ss{
+    color: darkblue;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.op{
+    color: green;
+
+}
+.top2 :hover{
+    background-color: white;
+}
+.decrease , increase {
+    color: black;
+    font-size: 20px;
+   
+}
+.increase{
+    color: black;
+    font-size: 20px;
+}
+
+.advertise {
+    text-align: center;
+    margin-top: 15px;
+}
