@@ -3,7 +3,7 @@ let items = [
         "name" : "Samsung Galaxy Note 20 Ultra",
         "price" : 10000000,
         "brand": "Samsung",
-        "image": "./product1.jpg",
+        "image": "./data/itemsData/product1.jpg",
         "info": [{
             "Monitor" :"Dynamic AMOLED 2X, 6.9', Quad HD+ (2K+)",
             "OS" : "Android 10",
@@ -22,7 +22,7 @@ let items = [
         "name":"iPhone 11 64GB",
         "price": 15990000,
         "brand" : "IPhone",
-        "image" :"./product2.jpg",
+        "image" :"./data/itemsData/product2.jpg",
         "info" : [{
             "Monitor" : "IPS LCD, 6.1', Liquid Retina",
             "OS" : "iOS 13",
@@ -40,7 +40,7 @@ let items = [
         "name": "OPPO A93",
         "price": 7490000,
         "brand": "OPPO",
-        "image" : "./product3.jpg",
+        "image" : "./data/itemsData/product3.jpg",
         "info": [{
             "Monitor": "AMOLED, 6.43', Full HD+",
             "OS": "	Android 10",
