@@ -1,4 +1,4 @@
-.top1{
+.top1 {
     background-color: black;
     font-size: 40px;
     color: crimson;
@@ -6,98 +6,105 @@
     padding-left: 30px;
     display: flex;
 }
-.top1 img{
+
+.top1 img {
     font-size: 50px;
     background-color: springgreen;
     color: yellow;
 }
-.top1 img{
+
+.top1 img {
     color: darkgreen;
     background-color: darkorange;
 }
-.smartphone{
+
+.smartphone {
     flex-direction: row;
     margin-top: 6px;
-    
 }
-.input{
+
+.input {
     flex-direction: row;
     margin-left: 145px;
     margin-bottom: 15px;
 }
-.top2{
+
+.top2 {
     display: flex;
-    padding: 20px; 
-   
+    padding: 20px;
 }
-.imgs{
+
+.imgs {
     transition: 0.7s;
 }
-.brand{
+
+.brand {
     flex: 1;
-   
 }
-.brand:hover img{
-    box-shadow:2px 4px 5px;
+
+.brand:hover img {
+    box-shadow: 2px 4px 5px;
     transition: 0.7s;
-
 }
 
 
-
-.slide{
-    margin-left: 75px;
-    border: 1px solid blue;
-    width: 790px;
-    overflow: hidden;
-    position: relative;
-   
-  }
-  .slide:hover .dieuhuong{
-      display: block;
-  }
-  .chuyen-slide{
-    width: 9999px;
-    transition: all 0.7s;
-   
-  }
-  .h{
-    width: 790px;
+.h {
     height: 300px;
-    float:left;
-  }
-  .dieuhuong{
+}
+
+.dieuhuong {
     position: absolute;
-    color:darkslategrey;
+    color: darkslategrey;
     font-size: 60px;
     top: 40%;
     padding-left: 20px;
     display: none;
     opacity: 0.4;
-  }
-  .dieuhuong img:last-child{
-    position: relative;
-    left: 620px; 
- }
- .advertise{
-     text-align: center;
-     margin-left: 15px;
-     margin-top: 20px;
- }
-
-
-.qc{
-    position: absolute;
-   display: block;
-   left: 895px;
-
 }
-.qc img{
+
+.dieuhuong img:last-child {
+    position: relative;
+    left: 620px;
+}
+
+.advertise {
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.top-container {
+    display: flex;
+    padding-left: 70px;
+    padding-right: 60px;
+}
+
+.slide {
+    border: 1px solid blue;
+    overflow: hidden;
+    position: relative;
+    width: 1550px;
+    height: 295px;
+}
+
+.slide:hover .dieuhuong {
+    display: block;
+}
+
+.chuyen-slide {
+    width: 9999px;
+    transition: all 0.7s;
+}
+.qc {
+}
+
+.qc img {
+    float: right;
     background-size: cover;
     padding-bottom: 5px;
 }
 
-.dthotnhat{
+.dthotnhat {
     display: flex;
     float: left;
     width: 1200px;
@@ -107,29 +114,34 @@
     margin-top: 60px;
     position: relative;
 }
-.dthotnhat img{
+
+.dthotnhat img {
     width: 250px;
     height: 230px;
     /* border: 1px solid blue; */
-   justify-content: space-around;
-   padding-top: 10px;
+    justify-content: space-around;
+    padding-top: 10px;
 }
-.dt{
+
+.dt {
     width: 250px;
     height: 230px;
     margin: 25px;
 }
-.name{
+
+.name {
     font-size: 20px;
-    color : darkblue;
+    color: darkblue;
     margin-left: 40px;
 }
-.price{
+
+.price {
     font-weight: bold;
     color: crimson;
     margin-left: 40px;
 }
-.hotphone{
+
+.hotphone {
     width: 200px;
     height: 60px;
     font-size: 20px;
