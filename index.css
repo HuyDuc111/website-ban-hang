@@ -6,6 +6,15 @@
     padding-left: 30px;
     display: flex;
 }
+.top1 img{
+    font-size: 50px;
+    background-color: springgreen;
+    color: yellow;
+}
+.top1 img{
+    color: darkgreen;
+    background-color: darkorange;
+}
 .smartphone{
     flex-direction: row;
     margin-top: 6px;
@@ -16,49 +25,121 @@
     margin-left: 145px;
     margin-bottom: 15px;
 }
-
 .top2{
-    background-color: lawngreen;
-    font-size: 30px;
-    display: flex; 
-    
-}
-
-.phone{
-    
-    flex: 1;
-    text-decoration: none;
-    padding-left: 70px;
-    padding-right: 70px;
-}
-.ip{
-    color: dimgray;
-    margin-left: 25px;
-    
-}
-.ss{
-    color: darkblue;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-.op{
-    color: green;
-
-}
-.top2 :hover{
-    background-color: white;
-}
-.decrease , increase {
-    color: black;
-    font-size: 20px;
+    display: flex;
+    padding: 20px; 
    
 }
-.increase{
-    color: black;
-    font-size: 20px;
+.imgs{
+    transition: 0.7s;
+}
+.brand{
+    flex: 1;
+   
+}
+.brand:hover img{
+    box-shadow:2px 4px 5px;
+    transition: 0.7s;
+
 }
 
-.advertise {
-    text-align: center;
-    margin-top: 15px;
+
+
+.slide{
+    margin-left: 75px;
+    border: 1px solid blue;
+    width: 790px;
+    overflow: hidden;
+    position: relative;
+   
+  }
+  .slide:hover .dieuhuong{
+      display: block;
+  }
+  .chuyen-slide{
+    width: 9999px;
+    transition: all 0.7s;
+   
+  }
+  .h{
+    width: 790px;
+    height: 300px;
+    float:left;
+  }
+  .dieuhuong{
+    position: absolute;
+    color:darkslategrey;
+    font-size: 60px;
+    top: 40%;
+    padding-left: 20px;
+    display: none;
+    opacity: 0.4;
+  }
+  .dieuhuong img:last-child{
+    position: relative;
+    left: 620px; 
+ }
+ .advertise{
+     text-align: center;
+     margin-left: 15px;
+     margin-top: 20px;
+ }
+
+
+.qc{
+    position: absolute;
+   display: block;
+   left: 895px;
+
+}
+.qc img{
+    background-size: cover;
+    padding-bottom: 5px;
+}
+
+.dthotnhat{
+    display: flex;
+    float: left;
+    width: 1200px;
+    height: 400px;
+    border: blue solid 1px;
+    margin-left: 75px;
+    margin-top: 60px;
+    position: relative;
+}
+.dthotnhat img{
+    width: 250px;
+    height: 230px;
+    /* border: 1px solid blue; */
+   justify-content: space-around;
+   padding-top: 10px;
+}
+.dt{
+    width: 250px;
+    height: 230px;
+    margin: 25px;
+}
+.name{
+    font-size: 20px;
+    color : darkblue;
+    margin-left: 40px;
+}
+.price{
+    font-weight: bold;
+    color: crimson;
+    margin-left: 40px;
+}
+.hotphone{
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    color: darkred;
+    background-color: gold;
+    position: absolute;
+    top: -33px;
+    left: 478px;
+    border-radius: 50%;
+    padding-left: 50px;
+    font-weight: bold;
+    border: 3px solid purple;
 }
