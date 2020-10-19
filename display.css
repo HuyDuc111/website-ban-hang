@@ -48,13 +48,15 @@ li {
   border: none;
 }
 .type li {
+  width: 33%;
+  height: 50px;
   border-left: 1px solid #ccc;
 }
 .type li {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 219px;
+  /* padding: 5px; */
   text-decoration: none;
 }
 .display {
