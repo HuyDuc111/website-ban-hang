@@ -251,23 +251,30 @@ function displayDescendingOrder() {
     document.getElementById('more').style.backgroundColor = '#ffffff';
 }
 // search button
-// document.getElementById("search-button").addEventListener('click', searchPhone)
-// function searchPhone(){
-//     let search = document.getElementById("input").value.trim();
-//     let result = items.filter((v) =>{
-//         return v.name.toLowerCase().includes(search.toLowerCase());
-//     })
-//     document.getElementsByClassName('display')[0].innerHTML="";
-//     for(let i = 0; i < result.length; i++){
-//         renderName = `<div class='product-name'>${result[i].name}</div>`;
-//         urlImg = result[i].image;
-//         renderImg =`<img src='${urlImg}' class="img">`
-//         renderPrice = `<div class="product-price">${result[i].price} Đ</div>`;
-//         renderButtonAddToCart='<div><button>Add To Cart</button></div>';
-//         renderButtonDetails = '<div><button>Details</button></div>';
-//         renderProductBox = '<div class="product-box">'+renderName + renderImg + renderPrice + renderButtonAddToCart + renderButtonDetails +'</div>';
-//         document.getElementsByClassName('display')[0].innerHTML += renderProductBox;
-//     }
-// }
+document.getElementById("search-button").addEventListener('click', searchPhone)
+function searchPhone(){
+    let searchDom = document.getElementById("input");
+    let search = searchDom.value;
+    // console.log(search);
+    let result = items.filter(function(v){
+        return v.name.toLowerCase().includes(search.toLowerCase());
+    })
+    document.getElementsByClassName('display')[0].innerHTML="";
+    for(let i = 0; i < result.length; i++){
+        renderName = `<div class='product-name'>${result[i].name}</div>`;
+        urlImg = result[i].image;
+        renderImg =`<img src='${urlImg}' class="img">`
+        renderPrice = `<div class="product-price">${result[i].price} Đ</div>`;
+        renderButtonAddToCart='<div><button>Add To Cart</button></div>';
+        renderButtonDetails = '<div><button>Details</button></div>';
+        renderProductBox = '<div class="product-box">'+ renderName + renderImg + renderPrice + renderButtonAddToCart + renderButtonDetails +'</div>';
+        document.getElementsByClassName('display')[0].innerHTML += renderProductBox;
+    }
+}
+
+
+
+
+
 
 
