@@ -85,8 +85,7 @@ li {
 }
 .sort .sort-by-price {
   float: left;
-  width: 150px;
-  padding: 0px 20px;
+  width: 10%;
   text-align: center;
   border: 1px solid #ccc;
 }
@@ -99,8 +98,7 @@ li {
   cursor: default;
 }
 .full-sort {
-  width: 160px;
-  padding: 0px 20px;
+  padding: 0px 100px;
   text-align: center;
   position: relative;
   display: inline-block;
