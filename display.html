@@ -10,9 +10,10 @@
    <header class="header">
        <div class="menu">
            <ul>
-               <li id='home'><a href="#">Home</a></li>
+               <li id='home'><a href="index.html">Home</a></li>
+               <li id='category'><a href="display.html">category</a></li>
                <li class='search' id='input'><input type="text"></li>
-               <li class='search' id='button'><button>Search</button></li>
+               <li class='search' id='search-button'><button>Search</button></li>
                <li id='register'><a href="login.html" >Register</a></li>
                <li id='login'><a href="#" >Login</a></li>
                <li id='cart'><a href="#">Cart</a></li>
@@ -20,29 +21,29 @@
        </div>
        <div class='type'>
            <ul>
-               <li>SamSung</li>
-               <li>IPhone</li>
-               <li>OPPO</li>
+               <li id="SamSung">SamSung</li>
+               <li id="IPhone">IPhone</li>
+               <li id="OPPO">OPPO</li>
            </ul>
        </div>
    </header>
    <div class="sort">
        <span class="sort-by-price">Sắp xếp theo: </span>
-       <div class="sort-by-price"> Dưới 2 triệu</div>
-       <div class="sort-by-price">Từ 2 - 4 triệu</div>
-       <div class="sort-by-price"> Từ 4 - 7 triệu</div>
-       <div class="sort-by-price"> Từ 7 - 13 triệu</div>
-       <div class="sort-by-price"> Trên 13 triệu</div>
+       <div class="sort-by-price" id="2tr"> Dưới 2 triệu</div>
+       <div class="sort-by-price" id="4tr">Từ 2 - 4 triệu</div>
+       <div class="sort-by-price" id="7tr"> Từ 4 - 7 triệu</div>
+       <div class="sort-by-price" id="13tr"> Từ 7 - 13 triệu</div>
+       <div class="sort-by-price" id="more"> Trên 13 triệu</div>
        <div class="sort-by-price, full-sort">
            <span>Sắp xếp</span>
            <div class="dropdown-content">
-               <p>Từ thấp đến cao</p>
-               <p>Từ cao đến thấp</p>
+               <p id="ascending-order">Từ thấp đến cao</p>
+               <p id="descending-order">Từ cao đến thấp</p>
            </div>
        </div>
    </div>
-   <div class='display'>
-    <div class="product-box">
+    <div class='display'>
+        <!-- <div class="product-box"></div> -->
     </div>
    <script src="./data/itemsData/items.js"></script>
    <script src="display.js"></script>

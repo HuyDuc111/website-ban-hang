@@ -92,6 +92,10 @@ li {
   background-color: #f1f1f1;
   cursor: pointer;
 }
+.sort-by-price:first-child:hover {
+  background-color: #ffffff;
+  cursor: default;
+}
 .full-sort {
   width: 160px;
   padding: 0px 20px;
