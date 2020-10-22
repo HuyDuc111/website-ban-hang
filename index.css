@@ -1,154 +1,154 @@
 .top{
-    overflow: hidden;
-    background-color: black;
-    padding-left: 5%;
+  overflow: hidden;
+  background-color: black;
+  padding-left: 5%;
 }
 .top1 {
-    
-    font-size: 20px;
-    color: crimson;
-    font-weight: bolder;
-    float: left;
+  
+  font-size: 20px;
+  color: crimson;
+  font-weight: bolder;
+  float: left;
 }
 
 .smartphone {
-    /* flex-direction: row; */
+  /* flex-direction: row; */
 
 }
 button{
-    background-color: gray;
-    float: left;
-    margin-top: 20px;
-    margin-left: 5px;
-    
+  background-color: gray;
+  float: left;
+  margin-top: 20px;
+  margin-left: 5px;
+  
 }
 .input {
-    float: left;
-    margin-top: 20px;
-    margin-left: 20%;
-  
+  float: left;
+  margin-top: 20px;
+  margin-left: 20%;
+
 }
 
 .top2 {
-    display: flex;
-    padding: 20px;
+  display: flex;
+  padding: 20px;
 }
 
 .imgs {
-    transition: 0.7s;
+  transition: 0.7s;
 }
 
 .brand {
-    flex: 1;
+  flex: 1;
 }
 
 .brand:hover img {
-    box-shadow: 2px 4px 5px;
-    transition: 0.7s;
+  box-shadow: 2px 4px 5px;
+  transition: 0.7s;
 }
 
 .dieuhuong {
-    position: absolute;
-    color: darkslategrey;
-    font-size: 60px;
-    top: 40%;
-    padding-left: 20px;
-    display: none;
-    opacity: 0.4;
+  position: absolute;
+  color: darkslategrey;
+  font-size: 60px;
+  top: 40%;
+  padding-left: 20px;
+  display: none;
+  opacity: 0.4;
 }
 
 .dieuhuong img:last-child {
-    position: relative;
-    left: 620px;
+  position: relative;
+  left: 620px;
 }
 
 .advertise {
-  
-    margin-left: 5%;
-    margin-top: 20px;
+
+  margin-left: 5%;
+  margin-top: 20px;
 }
 .slide{
-    margin-left: 5%;
-    border: 1px solid blue;
-    width: 790px;
-    overflow: hidden;
-    position: relative;
-   
-  }
+  margin-left: 5%;
+  border: 1px solid blue;
+  width: 790px;
+  overflow: hidden;
+  position: relative;
+ 
+}
 .slide:hover .dieuhuong{
-      display: block;
-  }
+    display: block;
+}
 .chuyen-slide{
-    width: 9999px;
-    transition: all 0.7s;
-   
-  }
+  width: 9999px;
+  transition: all 0.7s;
+ 
+}
 .chuyen-slide img{
-    width: 790px;
-    height: 300px;
-    float:left;
-  }
+  width: 790px;
+  height: 300px;
+  float:left;
+}
 .dieuhuong{
-    position: absolute;
-    color:darkslategrey;
-    font-size: 60px;
-    top: 40%;
-    padding-left: 20px;
-    display: none;
-    opacity: 0.4;
-  }
+  position: absolute;
+  color:darkslategrey;
+  font-size: 60px;
+  top: 40%;
+  padding-left: 20px;
+  display: none;
+  opacity: 0.4;
+}
 .dieuhuong img:last-child{
-    position: relative;
-    left: 620px; 
- }
+  position: relative;
+  left: 620px; 
+}
 
- .qc{
-    position: absolute;
-   display: block;
-   left:65.7%;
+.qc{
+  position: absolute;
+ display: block;
+ left:65.7%;
 
 }
 .qc img{
-    background-size: cover;
-    padding-bottom: 5px;
+  background-size: cover;
+  padding-bottom: 5px;
 }
 
 .listphone {
-    display: flex;
-    width: 1200px;
-    height: 400px;
-    border: blue solid 1px;
-    margin-left: 5%;
+  display: flex;
+  width: 1200px;
+  height: 400px;
+  border: blue solid 1px;
+  margin-left: 5%;
 }
 
 .listphone img {
-    width: 250px;
-    height: 230px;
-    justify-content: space-around;
-    padding-top: 10px;
+  width: 250px;
+  height: 230px;
+  justify-content: space-around;
+  padding-top: 10px;
 }
 
 .listphone div {
-    width: 250px;
-    height: 230px;
-    margin: 25px;
+  width: 250px;
+  height: 230px;
+  margin: 25px;
 }
 
 .name {
-    font-size: 20px;
-    color: darkblue;
-    margin-left: 40px;
+  font-size: 20px;
+  color: darkblue;
+  margin-left: 40px;
 }
 
 .price {
-    font-weight: bold;
-    color: crimson;
-    margin-left: 40px;
+  font-weight: bold;
+  color: crimson;
+  margin-left: 40px;
 }
 
 .title {
-    color: red;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
 }
