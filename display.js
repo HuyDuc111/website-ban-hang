@@ -9,12 +9,12 @@ var returnInfo ='';
 function displayItems(item){
     document.getElementsByClassName('display')[0].innerHTML='';
     for(let i = 0; i < item.length; i++){
-        renderName = `<div class='product-name'>${item[i].name}</div>`;
+        renderName = `<div class='product-name' onclick="viewDetail('${item[i].name}')">${item[i].name}</div>`;
         urlImg = item[i].image;
-        renderImg =`<img src='${urlImg}' class="img">`
+        renderImg =`<img src='${urlImg}' class="img" onclick="viewDetail('${item[i].name}')">`
         renderPrice = `<div class="product-price">${item[i].price} Đ</div>`;
-        renderButtonAddToCart='<div><button>Add To Cart</button></div>';
-        renderButtonDetails = '<div><button>Details</button></div>';
+        renderButtonAddToCart='<div><button >Add To Cart</button></div>';
+        renderButtonDetails =`<div><button onclick="viewDetail('${item[i].name}')">Details</button></div>`;
         renderProductBox = '<div class="product-box">'+renderName + renderImg + renderPrice + renderButtonAddToCart + renderButtonDetails +'</div>';
         document.getElementsByClassName('display')[0].innerHTML += renderProductBox;
     }
@@ -62,7 +62,13 @@ function displayItemsByWhatOrder(item){
     document.getElementById('13tr').style.backgroundColor = '#ffffff';
     document.getElementById('more').style.backgroundColor = '#ffffff';
 }
-
+function viewDetail(name){
+    localStorage.setItem('selected', name);
+    window.location.href = 'demoButton.html';
+}
+function addToCart(name){
+    
+}
 document.getElementById("SamSung").addEventListener("click", displaySamSung);
 function displaySamSung(){
     let result = returnItemsByClickBrand("SamSung")
@@ -78,7 +84,6 @@ function displayOPPO(){
     let result = returnItemsByClickBrand("OPPO")
     displayBrand(result,"OPPO");
 }
-
 document.getElementById("2tr").addEventListener("click", display2tr);
 function display2tr(){
     let result = returnItemsByClickOrder(items,0,2000000);
@@ -107,21 +112,21 @@ function displayMore(){
 document.getElementById("ascending-order").addEventListener("click", displayAscendingOrder);
 function displayAscendingOrder() {
     items.sort(function(a, b) {return a.price - b.price});
-    displayItems(items);
+    displayItemsByWhatOrder(items);
 }
 document.getElementById("descending-order").addEventListener("click", displayDescendingOrder);
 function displayDescendingOrder() {
     items.sort(function(a, b) {return b.price - a.price});
-    displayItems(items);
+    displayItemsByWhatOrder(items);
 }
 //search button
 document.getElementById("search-button").addEventListener('click', searchPhone)
 function searchPhone(){
     let searchDom = document.getElementById("input");
     let search = searchDom.value;
+    document.getElementById("input").value="";
     let result = items.filter(function(v){
         return v.name.toLowerCase().includes(search.toLowerCase());
     })
     displayItems(result);
-    document.getElementById("input").value="";
 }
