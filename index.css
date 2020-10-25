@@ -1,34 +1,59 @@
 .top{
-  overflow: hidden;
-  background-color: black;
-  padding-left: 5%;
+  position: relative;
+  background-color:yellow;
+  height: 60px;
+  
 }
 .top1 {
-  
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 20%;
   font-size: 20px;
+}
+.top1 a{
+  text-decoration: none;
   color: crimson;
   font-weight: bolder;
+}
+.top1 a:hover{
+  font-size: 21px;
+  color: blue;
+}
+.smartphones {
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 23px;
   float: left;
+  font-size: 22px;
+  color: crimson;
+  font-weight: bolder;
 }
-
-.smartphone {
-  /* flex-direction: row; */
-
-}
-button{
+.button{
+  position: absolute;
+  margin-left: 49%;
+  margin-top: 23px;
   background-color: gray;
-  float: left;
-  margin-top: 20px;
-  margin-left: 5px;
-  
 }
 .input {
-  float: left;
-  margin-top: 20px;
-  margin-left: 20%;
-
+  position: absolute;
+ margin-left: 35%;
+  margin-top: 23px;
 }
-
+.login{
+  position: absolute;
+  margin-left: 84%;
+  margin-top: 23px;
+  font-size: 20px;
+}
+.login a{
+  text-decoration: none;
+  color: crimson;
+  font-weight: bolder;
+}
+.login a:hover{
+  font-size: 21px;
+  color: blue;
+}
 .top2 {
   display: flex;
   padding: 20px;
@@ -145,7 +170,9 @@ button{
   color: crimson;
   margin-left: 40px;
 }
-
+.card{
+  margin-left: 40px;
+}
 .title {
   color: red;
   font-weight: bold;
