@@ -1,6 +1,7 @@
+
 .top{
   position: relative;
-  background-color:yellow;
+  background-color: black;
   height: 60px;
   
 }
@@ -17,6 +18,10 @@
 }
 .top1 a:hover{
   font-size: 21px;
+  color: blue;
+}
+.top .top1:hover{
+  font-size: 25px;
   color: blue;
 }
 .smartphones {
