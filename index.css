@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 *{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-=======
-
->>>>>>> 29f781d6549ebf93b50fb74ef03eb1f58f6f51af
 .top{
   
   position: relative;
-<<<<<<< HEAD
-  background-color:black;
-=======
   background-color: black;
->>>>>>> 29f781d6549ebf93b50fb74ef03eb1f58f6f51af
   height: 60px;
   
 }
