@@ -66,8 +66,13 @@ function viewDetail(name){
     localStorage.setItem('selected', name);
     window.location.href = 'demoButton.html';
 }
+// create an shoppingCart obj, have 2 function create a new item and store it n times
+// when click the add to cart button check if the shoppingCart obj isn't exists create a new one
+// every time the addToCart button is clicked check if the item is already in the shoppingCart then stored times will +=1
+// if the item is not in the shoppingCart then add new item to the shoppingCart with value = 1
+// save the shoppingCart obj to localStorage every times the button is clicked 
 function addToCart(name){
-    
+
 }
 document.getElementById("SamSung").addEventListener("click", displaySamSung);
 function displaySamSung(){
