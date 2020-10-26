@@ -328,7 +328,7 @@ let items = [
         "name": "Điện thoại Vivo Y50",
         "price": 6290000,
         "brand": "ViVo",
-        "image" : "./data/itemsData/produc19.jpg",
+        "image" : "./data/itemsData/product19.jpg",
         "info": {
             "Monitor": "IPS LCD, 6.53', Full HD+",
             "OS": "Android 10",
@@ -398,7 +398,7 @@ let items = [
  },
  {
         "name": "Điện thoại Vsmart Active 3 (6GB/64GB)",
-        "price": 399000,
+        "price": 3990000,
         "brand": "Vsmart",
         "image" : "./data/itemsData/product23.jpg",
         "info": {
