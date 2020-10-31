@@ -83,7 +83,6 @@ function addToCart(name){
         cartInfo.push(name);
         localStorage.setItem("cart", JSON.stringify(cartInfo)); 
     }
-
 }
 //search by brand SamSung
 document.getElementById("SamSung").addEventListener("click", displaySamSung);
