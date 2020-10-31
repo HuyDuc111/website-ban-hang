@@ -19,3 +19,4 @@ function Back(){
 setInterval(function(){
     Next()
 }, 2000)
+
