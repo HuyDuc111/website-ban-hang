@@ -15,8 +15,8 @@ function displayItems(item){
         urlImg = item[i].image;
         renderImg =`<img src='${urlImg}' class="img" onclick="viewDetail('${item[i].name}')">`
         renderPrice = `<div class="product-price">${item[i].price} Đ</div>`;
-        renderButtonAddToCart=`<div><button onclick="addToCart('${item[i].name}')">Add To Cart</button></div>`;
-        renderButtonDetails =`<div><button onclick="viewDetail('${item[i].name}')">Details</button></div>`;
+        renderButtonAddToCart=`<div class="button-add-too-cart" onclick="addToCart('${item[i].name}')">Add To Cart</div>`;
+        renderButtonDetails =`<div class="button-details" onclick="viewDetail('${item[i].name}')">Details</div>`;
         renderProductBox = '<div class="product-box">'+renderName + renderImg + renderPrice + renderButtonAddToCart + renderButtonDetails +'</div>';
         document.getElementsByClassName('display')[0].innerHTML += renderProductBox;
     }
