@@ -56,3 +56,16 @@ function displayItem(item){
     document.getElementsByClassName("body")[0].innerHTML=renderBody;
 }
 displayItem(item);
+// navbar button
+document.getElementsByClassName("home")[0].addEventListener("click", function(){
+    window.location.href="./index.html";
+})
+document.getElementsByClassName("category")[0].addEventListener("click", function(){
+    window.location.href="./display.html";
+})
+document.getElementsByClassName("cart")[0].addEventListener("click", function(){
+    window.location.href="./shoppingCart.html";
+})
+document.getElementsByClassName("login")[0].addEventListener("click", function(){
+    window.location.href="./login.html";
+})
