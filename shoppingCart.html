@@ -4,11 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./shoppingCart.css">
 </head>
 <body>
-    <div id="test">hello</div>
-    <button id="click"></button>
+    <header class="header">
+        <div class="navbar">
+            <div class="home">
+                SmartPhones
+            </div>
+            <div class="category">
+               Category
+            </div>
+            <div class="search">
+                <input placeholder="bạn tìm gì..." class="input" id="input">
+                <button class="button" id="search-button">
+                    Search
+                </button>
+            </div>
+            <div class="cart">
+                Cart
+            </div>
+            <div class="login">
+                Login
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="title">
+            <div class="name">My Cart</div>
+            <div class="continue-shopping">Continue Shopping</div>
+        </div>
+        <div class="product-box">
+            <img src="./data/itemsData/product1.jpg" alt="">
+            <div class="product-name">
+                <div class="name">Samsung Galaxy Note 20 Ultra</div>
+                <div class="price">
+                <div class="modified-product">
+                    <input type="number" placeholder="2">
+                </div>
+                <div class="price-product">x 10.000.000đ</div>
+            </div>
+            </div>
+            <div class="total-product-price">20.000.000đ</div>
+            <div class="clear">x</div>    
+        </div>
+        <div class="product-box">
+            <img src="./data/itemsData/product10.jpg" alt="">
+            <div class="product-name">
+                <div class="name">Điện thoại Samsung Galaxy S20+</div>
+                <div class="price">
+                <div class="modified-product">
+                    <input type="number" placeholder="2">
+                </div>
+                <div class="price-product">x 23.990.000</div>
+            </div>
+            </div>
+            <div class="total-product-price">27.980.000đ</div>
+            <div class="clear">x</div>    
+        </div>
+        <!-- <div class="product-box">
+            <img src="./data/itemsData/product10.jpg" alt="">
+            <div class="product-name">
+                <div class="name">Samsung Galaxy Z Fold2</div>
+                <div class="price">
+                <div class="modified-product">
+                    <input type="number" placeholder="2">
+                </div>
+                <div class="price-product">x 5.000.000đ</div>
+            </div>
+            </div>
+            <div class="total-product-price">10.000.000đ</div>
+            <div class="clear">x</div>    
+        </div> -->
+        <div class="total-price">
+            <div class="price-title">TỔNG SỐ TIỀN:</div>
+            <div class="price">47.980.000 Đ</div>
+        </div>
+    </div>
     <script src="./data/itemsData/items.js"></script>
-    <script src="./shoppingCart.js"></script>
+    <!-- <script src="./shoppingCart.js"></script> -->
 </body>
 </html>
