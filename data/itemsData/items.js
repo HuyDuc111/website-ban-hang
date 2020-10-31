@@ -11,8 +11,7 @@ let items = [
             "FrontCamera" : "10 MP",
             "CPU" : "Exynos 990 8 nhân",
             "RAM" : "8 GB",
-            "Internal memory" : "256 GB",
-            "StorageCard":	"MicroSD, hỗ trợ tối đa 1 TB",
+            "StorageCard" : "256 GB",
             "SIMCard": "2 Nano SIM hoặc 1 Nano SIM + 1 eSIM, Hỗ trợ 4G",
             "Battery":	"4500 mAh, có sạc nhanh"
         },
