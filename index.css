@@ -4,10 +4,14 @@
   font-family: sans-serif;
 }
 .navbar{
-  position: relative;
+  /* position: relative; */
   background-color: black;
   height: 60px;
   display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 .home {
   width:10%;

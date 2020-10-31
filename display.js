@@ -75,8 +75,15 @@ function viewDetail(name){
 // if the item is not in the shoppingCart then add new item to the shoppingCart with value = 1
 // save the shoppingCart obj to localStorage every times the button is clicked 
 function addToCart(name){
-    cartInfo.push(name);
-    localStorage.setItem("cart", JSON.stringify(cartInfo));
+    if(JSON.parse(localStorage.getItem("cart")) === null){
+        cartInfo.push(name);
+        localStorage.setItem("cart", JSON.stringify(cartInfo));
+    }else{
+        cartInfo = JSON.parse(localStorage.getItem("cart"));
+        cartInfo.push(name);
+        localStorage.setItem("cart", JSON.stringify(cartInfo)); 
+    }
+
 }
 //search by brand SamSung
 document.getElementById("SamSung").addEventListener("click", displaySamSung);

@@ -1,8 +1,11 @@
 .navbar{
-  position: relative;
   background-color: black;
   height: 60px;
   display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 .home {
   width:10%;
@@ -91,6 +94,7 @@
 }
 
 .brand {
+  margin-top: 50px;
   text-align: center;
   flex: 1;
 }
