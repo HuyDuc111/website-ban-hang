@@ -67,7 +67,7 @@ function displayItemsByWhatOrder(item){
 //view detail function
 function viewDetail(name){
     localStorage.setItem('selected', name);
-    window.location.href = 'demoButton.html';
+    window.location.href = 'details.html';
 }
 // create an shoppingCart obj, have 2 function create a new item and store it n times
 // when click the add to cart button check if the shoppingCart obj isn't exists create a new one
