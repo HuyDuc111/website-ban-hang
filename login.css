@@ -6,7 +6,7 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: url(img/aduoi.jpg);
+    background-image: url(./imglogin/aduoi.jpg);
     background-position: center;
     background-size: cover;
     border: 1px solid black;
