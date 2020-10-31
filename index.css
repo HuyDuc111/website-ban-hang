@@ -194,7 +194,7 @@
   padding-top: 10px;
 }
 
-.listphone div {
+.listphone >div {
   width: 250px;
   height: 230px;
   margin: 25px;
@@ -224,4 +224,13 @@
   font-size: 25px;
   margin-left: 6%;
   margin-top: 30px;
+}
+.cart2{
+  border-radius: 10px;
+  padding:10px;
+  text-align: center;
+  width: 200px;
+  height: 20px;
+  color: white;
+  background-color: #0c9f40;
 }
