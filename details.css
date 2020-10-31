@@ -91,8 +91,88 @@
     cursor: pointer;
     font-size: 21px;
     color: blue;
-  }
+}
+.body{
+    width:100%;
+    margin-top: 5%;
+    float: none;
+}
 .phoneName{
-    margin-top:100px;
+    padding:20px 10% 0 10%;
+    font-size:30px;
+    border-bottom: 1px solid #ccc;
+}
+.info{
+    margin-top: 10px;
+    display: flex;
+}
+.info img{
+    width: 40%;
+    height: 600px;
+}
+.info .promo{
+    width:30%;
+}
+.info .promo .price{
+    font-size:25px;
+    color:red;
+}
+.info .promo .promo-list{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding-left:10px;
+}
+.info .promo .promo-list .promo-info{
+    margin-top:10px;
+}
+.info .promo .promo-list .promo-info:first-child{
+    border-bottom: 1px solid #ccc;
+}
+#title #title-promo{
+    font-size:25px;
+    color:#288ad6;
+}
+#title #promo-time{
+    font-size:10px;
+}
+.info .promo .service-list{
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding-left:10px;
+    padding-bottom: 10px;
+}
+.info .promo .service-list .service{
+    margin-top:10px;
+}
+
+.info .product-info-list{
+    width:30%;
+    margin-left: 2%;
+}
+.info .product-info-list .product-info{
+    margin-top:30px;
+    border-bottom: 1px solid #ccc;
+}
+.info .product-info-list #title-info{
+    font-size:25px;
+    color: #288ad6;
+}
+.add-to-cart-button{
     text-align: center;
+    margin: 20px 40%;
+    background: -webkit-linear-gradient(top,#f59000,#fd6e1d);
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.add-to-cart-button:hover{
+    cursor: pointer;
+}
+.add-to-cart-button .name{
+    color: white;
+    font-size: 30px;
+}
+.add-to-cart-button .options{
+    color: white;
+    font-size:10px;
 }
