@@ -66,6 +66,10 @@
   text-decoration: none;
   transition: 0.5s;
 }
+#number{
+  color:red;
+  font-size: 15px;
+}
 .cart:hover{
   cursor: pointer;
   color: blue;
@@ -114,7 +118,7 @@
   width: 100px;
   height: 25px;
   color: white;
-  background-color: #0c9f40;
+  background: -webkit-linear-gradient(top,#0cf940,#008b0c);
 }
 .button-details{
   margin-top: 10px;
@@ -124,7 +128,7 @@
   width: 100px;
   height: 25px;
   color: white;
-  background-color: #ff8a04;
+  background: -webkit-linear-gradient(top,#f59000,#ad4102);
 }
 .button-add-too-cart:hover{
   cursor: pointer;

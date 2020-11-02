@@ -56,6 +56,20 @@ function displayItem(item){
     document.getElementsByClassName("body")[0].innerHTML=renderBody;
 }
 displayItem(item);
+//number of items on cart
+if(localStorage.getItem("cart") === null){
+    document.getElementById("number").innerHTML="";
+}else{
+    document.getElementById("number").innerHTML=JSON.parse(localStorage.getItem("cart")).length;
+}
+//search button
+document.getElementById("search-button").addEventListener('click', searchPhone)
+function searchPhone(){
+    let searchDom = document.getElementById("input");
+    let search = searchDom.value.trim();
+    localStorage.setItem("searchPhone",search);
+    window.location.href="./display.html"
+}
 // navbar button
 document.getElementsByClassName("home")[0].addEventListener("click", function(){
     window.location.href="./index.html";

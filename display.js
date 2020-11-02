@@ -7,6 +7,8 @@ var renderButtonDetails ='';
 var renderProductBox ='';
 var returnInfo ='';
 var cartInfo=[];
+var renderSearches ;
+
 // display a list of items
 function displayItems(item){
     document.getElementsByClassName('display')[0].innerHTML='';
@@ -21,7 +23,25 @@ function displayItems(item){
         document.getElementsByClassName('display')[0].innerHTML += renderProductBox;
     }
 }
-displayItems(items);
+//display from search of other pages
+if(localStorage.getItem("searchPhone")!== null) {
+    renderSearches = localStorage.getItem("searchPhone");
+    localStorage.removeItem("searchPhone");
+    let result = items.filter(function(v){
+        return v.name.toLowerCase().includes(renderSearches.toLowerCase());
+    })
+    if(result.length > 0)
+    {
+        displayItems(result);
+    }
+    else{
+        document.getElementsByClassName('display')[0].innerHTML="";
+        returnInfo = "<div> Không có kết quả nào phù hợp</div>";
+        document.getElementsByClassName('display')[0].innerHTML += returnInfo;
+    } 
+}else{
+    displayItems(items);
+}
 // display items with the same brand
 function displayBrand(item, brand) {
     displayItems(item);   
@@ -69,6 +89,12 @@ function viewDetail(name){
     localStorage.setItem('selected', name);
     window.location.href = 'details.html';
 }
+//number of items on cart
+if(localStorage.getItem("cart") === null){
+    document.getElementById("number").innerHTML="";
+}else{
+    document.getElementById("number").innerHTML=JSON.parse(localStorage.getItem("cart")).length;
+}
 // create an shoppingCart obj, have 2 function create a new item and store it n times
 // when click the add to cart button check if the shoppingCart obj isn't exists create a new one
 // every time the addToCart button is clicked check if the item is already in the shoppingCart then stored times will +=1
@@ -76,9 +102,11 @@ function viewDetail(name){
 // save the shoppingCart obj to localStorage every times the button is clicked 
 function addToCart(name){
     if(JSON.parse(localStorage.getItem("cart")) === null){
+        document.getElementById("number").innerHTML="1";
         cartInfo.push(name);
         localStorage.setItem("cart", JSON.stringify(cartInfo));
     }else{
+        document.getElementById("number").innerHTML=JSON.parse(localStorage.getItem("cart")).length+1;
         cartInfo = JSON.parse(localStorage.getItem("cart"));
         cartInfo.push(name);
         localStorage.setItem("cart", JSON.stringify(cartInfo)); 

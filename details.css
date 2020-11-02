@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
   }
   .navbar{
     /* position: relative; */
@@ -73,6 +73,10 @@
     cursor: pointer;
     color: blue;
     font-size: 21px;
+  }
+  #number{
+    color:red;
+    font-size: 15px;
   }
   .login{
     position: absolute;
