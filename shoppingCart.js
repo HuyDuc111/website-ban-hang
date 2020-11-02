@@ -6,27 +6,33 @@ let numberOfProducts =[]
 let productPrice=[]
 let productImg=[]
 let cart = JSON.parse(localStorage.getItem("cart"));
-let a = cart.sort();
-for (let i = 0; i<cart.length; i++){
-    if(cart[i] !==cart[i-1]){
-        cartName.push(cart[i]);
+let a=[];
+if(cart===null){
+    document.getElementsByClassName("body")[0]="Giỏ Hàng Trống";
+}else{
+    a = cart.sort();
+    for (let i = 0; i<cart.length; i++){
+        if(cart[i] !==cart[i-1]){
+            cartName.push(cart[i]);
+        }
+    }
+    for (let i = 0; i <cartName.length; i++){
+        let b = a.lastIndexOf(cartName[i]) - a.indexOf(cartName[i]) + 1;
+        numberOfProducts.push(b);
+    }
+    for (let i = 0; i <cartName.length; i++){
+        let result = items.find(item => item.name === cartName[i]);
+        productPrice.push(result.price);
+    }
+    for (let i = 0; i <cartName.length; i++){
+        let result = items.find(item => item.name === cartName[i]);
+        productImg.push(result.image);
+    }
+    for (let i = 0; i <cartName.length; i++){
+        totalPrice += numberOfProducts[i]*productPrice[i];
     }
 }
-for (let i = 0; i <cartName.length; i++){
-    let b = a.lastIndexOf(cartName[i]) - a.indexOf(cartName[i]) + 1;
-    numberOfProducts.push(b);
-}
-for (let i = 0; i <cartName.length; i++){
-    let result = items.find(item => item.name === cartName[i]);
-    productPrice.push(result.price);
-}
-for (let i = 0; i <cartName.length; i++){
-    let result = items.find(item => item.name === cartName[i]);
-    productImg.push(result.image);
-}
-for (let i = 0; i <cartName.length; i++){
-    totalPrice += numberOfProducts[i]*productPrice[i];
-}
+
 
 function renderCartItem(cartName, numberOfProducts, productPrice, productImg){
     for (let i = 0; i <cartName.length; i++){
@@ -42,12 +48,12 @@ function renderCartItem(cartName, numberOfProducts, productPrice, productImg){
         </div>
     </div>
     <div class="total-product-price">${productPrice[i]*numberOfProducts[i]}đ</div>
-    <div class="clear" onclick="clearItem(${i},${numberOfProducts},${productPrice})">x</div>
+    <div class="clear" onclick="clearItem(${i},${numberOfProducts[i]},${productPrice[i]})">x</div>
 </div>`
     }
     renderTotalPrice=`<div class="total-price">
     <div class="price-title">TỔNG SỐ TIỀN:</div>
-    <div class="price"> ${totalPrice}Đ</div>
+    <div class="sum-price"> ${totalPrice}Đ</div>
     </div>`
     document.getElementsByClassName("body")[0].innerHTML=`
     <div class="title">
@@ -56,15 +62,26 @@ function renderCartItem(cartName, numberOfProducts, productPrice, productImg){
     </div>
     ${renderProductBox}
     ${renderTotalPrice}
-    <div class="order">Đặt Hàng</div>`;
+    <div class="order" onclick="order()">Đặt Hàng</div>`;
 }
 
 renderCartItem(cartName, numberOfProducts, productPrice, productImg);
-// function clearItem(i,numberOfProducts,productPrice){
-//     document.getElementsByClassName("product-box")[i].innerHTML="";
-//     console.log(abc);
-//     document.getElementsByClassName("price")[0].innerHTML = abc.toString()+'đ';
-// }
+function clearItem(i,numberOfProducts,productPrice){
+    document.getElementsByClassName("product-box")[i].innerHTML="";
+    totalPrice -=  numberOfProducts*productPrice;
+    document.getElementsByClassName("sum-price")[0].innerHTML = totalPrice+'đ';
+}
+function order(){
+    if(cart===null){
+        alert("Chưa có hàng trong giỏ")
+        window.location.href="./display.html";
+    }
+    else{
+        alert("Đặt hàng thành công")
+        localStorage.removeItem("cart");
+        window.location.href="./index.html";
+    }
+}
 //number of items on cart
 if(localStorage.getItem("cart") === null){
     document.getElementById("number").innerHTML="";
