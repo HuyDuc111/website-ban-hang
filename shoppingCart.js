@@ -58,13 +58,16 @@ function renderCartItem(cartName, numberOfProducts, productPrice, productImg){
     document.getElementsByClassName("body")[0].innerHTML=`
     <div class="title">
     <div class="name">My Cart</div>
-    <div class="continue-shopping">Continue Shopping</div>
+    <div class="continue-shopping" onclick="Shopping()">Continue Shopping</div>
     </div>
     ${renderProductBox}
     ${renderTotalPrice}
     <div class="order" onclick="order()">Đặt Hàng</div>`;
 }
 
+function Shopping(){
+    window.location.href="./display.html";
+}
 renderCartItem(cartName, numberOfProducts, productPrice, productImg);
 function clearItem(i,numberOfProducts,productPrice){
     document.getElementsByClassName("product-box")[i].innerHTML="";

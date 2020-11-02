@@ -18,6 +18,7 @@ let renderSIMCard="";
 let renderBattery="";
 let renderButton="";
 let renderBody="";
+let cartInfo=[];
 let selectedName = localStorage.getItem('selected');
 let item = items.find(function (p) {
     return p.name === selectedName;
@@ -49,7 +50,7 @@ function displayItem(item){
     renderSimCard=`<div class="product-info">Thẻ SIM:       ${item.info.SIMCard}</div>`;
     renderBattery=`<div class="product-info">Dung lượng pin:	     ${item.info.Battery}</div>`;
     renderProductInfoList='<div class="product-info-list"><div class="product-info" id="title-info">Thông số kỹ thuật</div>'+renderMonitor+renderOS+renderBackCamera+renderFrontCamera+renderCPU+renderRAM+renderStorageCard+renderSimCard+renderBattery+'</div>';
-    renderButton='<div class="add-to-cart-button"><div class="name">Add To Cart</div><div class="options">Giao hàng tận nơi hoặc mua tại siêu thị</div></div>';
+    renderButton=`<div class="add-to-cart-button" onclick="addToCart('${item.name}')"><div class="name">Add To Cart</div><div class="options">Giao hàng tận nơi hoặc mua tại siêu thị</div></div>`;
     renderPromo='<div class="promo">'+renderPrice+ renderPromoList+renderServiceList+'</div>';
     renderInfo='<div class="info">'+renderImg+ renderPromo+renderProductInfoList +'</div>';
     renderBody= renderName+ renderInfo+ renderButton;
@@ -61,6 +62,19 @@ if(localStorage.getItem("cart") === null){
     document.getElementById("number").innerHTML="";
 }else{
     document.getElementById("number").innerHTML=JSON.parse(localStorage.getItem("cart")).length;
+}
+// add to cart button
+function addToCart(a){
+    if(JSON.parse(localStorage.getItem("cart")) === null){
+        document.getElementById("number").innerHTML="1";
+        cartInfo.push(a);
+        localStorage.setItem("cart", JSON.stringify(cartInfo));
+    }else{
+        document.getElementById("number").innerHTML=JSON.parse(localStorage.getItem("cart")).length+1;
+        cartInfo = JSON.parse(localStorage.getItem("cart"));
+        cartInfo.push(a);
+        localStorage.setItem("cart", JSON.stringify(cartInfo)); 
+    }
 }
 //search button
 document.getElementById("search-button").addEventListener('click', searchPhone)
